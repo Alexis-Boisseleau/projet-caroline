@@ -46,26 +46,85 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
         // line 1
         echo "<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>";
-        // line 5
-        $this->displayBlock('title', $context, $blocks);
-        echo "</title>
-        ";
+\t<head>
+\t\t<meta charset=\"UTF-8\">
+\t\t<title>
+\t\t\t";
         // line 6
-        $this->displayBlock('stylesheets', $context, $blocks);
-        // line 7
-        echo "    </head>
-    <body>
-        ";
+        $this->displayBlock('title', $context, $blocks);
+        // line 8
+        echo "\t\t</title>
+\t\t";
         // line 9
-        $this->displayBlock('body', $context, $blocks);
+        $this->displayBlock('stylesheets', $context, $blocks);
         // line 10
-        echo "        ";
+        echo "\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+\t</head>
+\t<body>
+\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+\t\t\t<a class=\"navbar-brand\" href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">caroline</a>
+\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
+\t\t\t</button>
+
+\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+\t\t\t\t<ul class=\"navbar-nav mr-auto\">
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a class=\"nav-link ";
+        // line 22
+        if ((0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 22, $this->source); })()), "amenagements"))) {
+            echo "active";
+        }
+        echo "\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("design-interieur");
+        echo "\">Design Interieur
+
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a class=\"nav-link ";
+        // line 27
+        if ((0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 27, $this->source); })()), "architectures"))) {
+            echo "active";
+        }
+        echo "\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("architecture.index");
+        echo "\">Architecture
+
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a class=\"nav-link ";
+        // line 32
+        if ((0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 32, $this->source); })()), "prestations"))) {
+            echo "active";
+        }
+        echo "\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prestations");
+        echo "\">Prestations
+
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+
+\t\t\t\t</ul>
+
+\t\t\t</div>
+\t\t</nav>
+\t\t";
+        // line 41
+        $this->displayBlock('body', $context, $blocks);
+        // line 42
+        echo "\t\t";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 11
-        echo "    </body>
+        // line 43
+        echo "
+\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+\t</body>
 </html>
 ";
         
@@ -76,7 +135,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -86,7 +145,8 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Welcome!
+\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -95,7 +155,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 
     }
 
-    // line 6
+    // line 9
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -113,7 +173,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 
     }
 
-    // line 9
+    // line 41
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -131,7 +191,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 
     }
 
-    // line 10
+    // line 42
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -154,24 +214,65 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  135 => 10,  117 => 9,  99 => 6,  80 => 5,  68 => 11,  65 => 10,  63 => 9,  59 => 7,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  195 => 42,  177 => 41,  159 => 9,  139 => 6,  123 => 43,  120 => 42,  118 => 41,  102 => 32,  90 => 27,  78 => 22,  67 => 14,  61 => 10,  59 => 9,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+\t<head>
+\t\t<meta charset=\"UTF-8\">
+\t\t<title>
+\t\t\t{% block title %}Welcome!
+\t\t\t{% endblock %}
+\t\t</title>
+\t\t{% block stylesheets %}{% endblock %}
+\t\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+\t</head>
+\t<body>
+\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+\t\t\t<a class=\"navbar-brand\" href=\"{{path('home')}}\">caroline</a>
+\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
+\t\t\t</button>
+
+\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+\t\t\t\t<ul class=\"navbar-nav mr-auto\">
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a class=\"nav-link {% if current_menu == 'amenagements' %}active{% endif %}\" href=\"{{path('design-interieur')}}\">Design Interieur
+
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a class=\"nav-link {% if current_menu == 'architectures' %}active{% endif %}\" href=\"{{path('architecture.index')}}\">Architecture
+
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t<a class=\"nav-link {% if current_menu == 'prestations' %}active{% endif %}\" href=\"{{path('prestations')}}\">Prestations
+
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+
+\t\t\t\t</ul>
+
+\t\t\t</div>
+\t\t</nav>
+\t\t{% block body %}{% endblock %}
+\t\t{% block javascripts %}{% endblock %}
+
+\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+\t</body>
 </html>
 ", "base.html.twig", "D:\\wamp\\www\\projet-caroline\\templates\\base.html.twig");
     }
