@@ -89,6 +89,44 @@ class __TwigTemplate_9ad819953c472b71ba8aacff7978fd7a41f74c25b02859cd2097cbe7147
         echo "\t<div class=\"jumbotron\">
 \t\t<h1>Design Interieur</h1>
 \t</div>
+
+\t<div class=\"container\">
+\t\t<div class=\"row flex\">
+\t\t\t";
+        // line 12
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["amenagements"]) || array_key_exists("amenagements", $context) ? $context["amenagements"] : (function () { throw new RuntimeError('Variable "amenagements" does not exist.', 12, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["amenagement"]) {
+            // line 13
+            echo "\t\t\t\t<div class=\"col-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t<div class=\"card-title\">
+\t\t\t\t\t\t\t\t<a href=\"";
+            // line 17
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("design.show", ["id" => twig_get_attribute($this->env, $this->source, $context["amenagement"], "id", [], "any", false, false, false, 17), "slug" => twig_get_attribute($this->env, $this->source, $context["amenagement"], "slug", [], "any", false, false, false, 17)]), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["amenagement"], "title", [], "any", false, false, false, 17), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<p class=\"card-text\">";
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["amenagement"], "description", [], "any", false, false, false, 19), "html", null, true);
+            echo "</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['amenagement'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 25
+        echo "\t\t</div>
+
+
+\t</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -110,7 +148,7 @@ class __TwigTemplate_9ad819953c472b71ba8aacff7978fd7a41f74c25b02859cd2097cbe7147
 
     public function getDebugInfo()
     {
-        return array (  89 => 6,  79 => 5,  59 => 2,  36 => 1,);
+        return array (  126 => 25,  114 => 19,  107 => 17,  101 => 13,  97 => 12,  89 => 6,  79 => 5,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -122,6 +160,26 @@ class __TwigTemplate_9ad819953c472b71ba8aacff7978fd7a41f74c25b02859cd2097cbe7147
 {% block body %}
 \t<div class=\"jumbotron\">
 \t\t<h1>Design Interieur</h1>
+\t</div>
+
+\t<div class=\"container\">
+\t\t<div class=\"row flex\">
+\t\t\t{%for amenagement in amenagements%}
+\t\t\t\t<div class=\"col-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t<div class=\"card-title\">
+\t\t\t\t\t\t\t\t<a href=\"{{path('design.show',{id :amenagement.id, slug: amenagement.slug})}}\">{{amenagement.title}}
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<p class=\"card-text\">{{amenagement.description}}</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t{% endfor %}
+\t\t</div>
+
+
 \t</div>
 {% endblock %}
 ", "amenagements/allDesign.html.twig", "D:\\wamp\\www\\projet-caroline\\templates\\amenagements\\allDesign.html.twig");
