@@ -76,7 +76,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 \t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t<a class=\"nav-link ";
         // line 23
-        if ((0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 23, $this->source); })()), "amenagements"))) {
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 23, $this->source); })()), "amenagements")))) {
             echo "active";
         }
         echo "\" href=\"";
@@ -88,7 +88,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 \t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t<a class=\"nav-link ";
         // line 28
-        if ((0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 28, $this->source); })()), "architectures"))) {
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 28, $this->source); })()), "architectures")))) {
             echo "active";
         }
         echo "\" href=\"";
@@ -100,7 +100,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 \t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t<a class=\"nav-link ";
         // line 33
-        if ((0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 33, $this->source); })()), "prestations"))) {
+        if (((isset($context["current_menu"]) || array_key_exists("current_menu", $context)) && (0 === twig_compare((isset($context["current_menu"]) || array_key_exists("current_menu", $context) ? $context["current_menu"] : (function () { throw new RuntimeError('Variable "current_menu" does not exist.', 33, $this->source); })()), "prestations")))) {
             echo "active";
         }
         echo "\" href=\"";
@@ -125,6 +125,9 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 \t\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdn.tiny.cloud/1/4xyute4n5gmk84bq0kfn17kv45ew7xquvh7j8yt1hiyu3gpi/tinymce/5/tinymce.min.js\" referrerpolicy=\"origin\"></script>
+\t\t<script src=\"../../public/Js/index.js\"></script>
+
 \t</body>
 </html>
 ";
@@ -222,7 +225,7 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 
     public function getDebugInfo()
     {
-        return array (  196 => 43,  178 => 42,  160 => 9,  140 => 6,  124 => 44,  121 => 43,  119 => 42,  103 => 33,  91 => 28,  79 => 23,  68 => 15,  61 => 10,  59 => 9,  56 => 8,  54 => 6,  47 => 1,);
+        return array (  199 => 43,  181 => 42,  163 => 9,  143 => 6,  124 => 44,  121 => 43,  119 => 42,  103 => 33,  91 => 28,  79 => 23,  68 => 15,  61 => 10,  59 => 9,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -249,17 +252,17 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 \t\t\t<div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarSupportedContent\">
 \t\t\t\t<ul class=\"navbar-nav \">
 \t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t<a class=\"nav-link {% if current_menu == 'amenagements' %}active{% endif %}\" href=\"{{path('design-interieur')}}\">Design Interieur
+\t\t\t\t\t\t<a class=\"nav-link {% if current_menu is defined and current_menu == 'amenagements' %}active{% endif %}\" href=\"{{path('design-interieur')}}\">Design Interieur
 
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t<a class=\"nav-link {% if current_menu == 'architectures' %}active{% endif %}\" href=\"{{path('architecture.index')}}\">Architecture
+\t\t\t\t\t\t<a class=\"nav-link {% if current_menu is defined and current_menu == 'architectures' %}active{% endif %}\" href=\"{{path('architecture.index')}}\">Architecture
 
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t<a class=\"nav-link {% if current_menu == 'prestations' %}active{% endif %}\" href=\"{{path('prestations')}}\">Prestations
+\t\t\t\t\t\t<a class=\"nav-link {% if current_menu is defined and current_menu == 'prestations' %}active{% endif %}\" href=\"{{path('prestations')}}\">Prestations
 
 \t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
@@ -274,6 +277,9 @@ class __TwigTemplate_8b49e5ae53aa6ee245d8c75197fe672aee85b1300d3a62873833c0b2f42
 \t\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 \t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+\t\t<script src=\"https://cdn.tiny.cloud/1/4xyute4n5gmk84bq0kfn17kv45ew7xquvh7j8yt1hiyu3gpi/tinymce/5/tinymce.min.js\" referrerpolicy=\"origin\"></script>
+\t\t<script src=\"../../public/Js/index.js\"></script>
+
 \t</body>
 </html>
 ", "base.html.twig", "D:\\wamp\\www\\projet-caroline\\templates\\base.html.twig");

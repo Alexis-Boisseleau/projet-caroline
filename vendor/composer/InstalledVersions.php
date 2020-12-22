@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9808dc84b70f6196ebdd67a6741506573c327679',
+    'reference' => 'acc9e24cfecd677659ea9b0cd7dbc22ae16750be',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9808dc84b70f6196ebdd67a6741506573c327679',
+      'reference' => 'acc9e24cfecd677659ea9b0cd7dbc22ae16750be',
     ),
     'cocur/slugify' => 
     array (
@@ -204,6 +204,24 @@ private static $installed = array (
       array (
       ),
       'reference' => 'ca90a3291eee1538cd48ff25163240695bd95448',
+    ),
+    'friendsofsymfony/ckeditor-bundle' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7e1cfe2a83faba0be02661d44289d35e940bb5ea',
+    ),
+    'helios-ag/fm-elfinder-bundle' => 
+    array (
+      'pretty_version' => '10.0.4',
+      'version' => '10.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '334dbd43623d34c962c2e9607565babede2e917a',
     ),
     'monolog/monolog' => 
     array (
@@ -383,6 +401,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '430d14c01836b77c28092883d195a43ce413ee32',
+    ),
+    'studio-42/elfinder' => 
+    array (
+      'pretty_version' => '2.1.57',
+      'version' => '2.1.57.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '087524b1d7a4d76cfd848dee2093cd8daf987f78',
     ),
     'symfony/asset' => 
     array (

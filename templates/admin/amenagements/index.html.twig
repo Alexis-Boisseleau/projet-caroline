@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+{% block title %}gerer les projets
+{% endblock %}
+
+{% block body %}
+	<div class='container'>
+		{% for message in  app.flashes('success') %}
+			<div class="div alert alert-success mt-4">
+				{{message}}
+			</div>
+		{% endfor %}
+		<h1>
+			Gerer les Design Interieurs
+		</h1>
+		<table class='table table-striped'>
+			<thead>
+				<tr>
+					<th>titre</th>
+					<th>action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{%for design in designs %}
+					<tr>
+						<td>{{design.title}}</td>
+						<td>
+							<a href="{{path('admin.edit', {id: design.id})}}" class="btn btn-secondary">Editer</a>
+							<a href="{{path('admin.delete', {id: design.id})}}" class="btn btn-danger">supprimer</a>
+
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<h1>
+			Gerer les projets Architectures
+		</h1>
+		<table class='table table-striped'>
+			<thead>
+				<tr>
+					<th>titre</th>
+					<th>action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{%for archi in architectures %}
+					<tr>
+						<td>{{archi.title}}</td>
+						<td>
+							<a href="{{path('admin.edit', {id: archi.id})}}" class="btn btn-secondary">Editer</a>
+							<a href="{{path('admin.delete', {id: archi.id})}}" class="btn btn-danger">supprimer</a>
+						</td>
+					</tr>
+
+				{% endfor %}
+			</tbody>
+		</table>
+		<div class="text-right">
+			<a href="{{path('admin.amenagements.new')}}" class="btn btn-primary">Créer projet</a>
+		</div>
+
+
+	</div>
+
+
+{% endblock %}

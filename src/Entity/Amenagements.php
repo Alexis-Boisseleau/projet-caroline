@@ -5,9 +5,12 @@ namespace App\Entity;
 use App\Repository\AmenagementsRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=AmenagementsRepository::class)
+ * @UniqueEntity("title")
  */
 class Amenagements
 {
@@ -27,16 +30,19 @@ class Amenagements
 
     /**
      * @ORM\Column(type="string", length=255)
+     *@Assert\Length(min=10)
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     *@Assert\Length(min=10)
      */
     private $description;
 
     /**
      * @ORM\Column(type="text")
+     *@Assert\Length(min=10)
      */
     private $content;
 

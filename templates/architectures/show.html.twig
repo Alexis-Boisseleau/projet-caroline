@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title archi.title  %}
+{% block body %}
+	<div class="container">
+		<h1>
+			{{archi.title}}</h1>
+		<p>{{archi.description}}</p>
+		<p>{{archi.content|raw}}</p>
+	</div>
+
+
+{% endblock %}

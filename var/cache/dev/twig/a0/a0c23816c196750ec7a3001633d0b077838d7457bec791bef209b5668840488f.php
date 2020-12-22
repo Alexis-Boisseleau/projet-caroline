@@ -102,8 +102,10 @@ class __TwigTemplate_85071e7373b284c58636f068baf0afad823f69665c5f366f1051f5dbbe7
 \t\t\t\t\t<div class=\"card\">
 \t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t<div class=\"card-title\">
-\t\t\t\t\t\t\t\t<a href=\"\">";
+\t\t\t\t\t\t\t\t<a href=\"";
             // line 17
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("archi.show", ["id" => twig_get_attribute($this->env, $this->source, $context["amenagement"], "id", [], "any", false, false, false, 17), "slug" => twig_get_attribute($this->env, $this->source, $context["amenagement"], "slug", [], "any", false, false, false, 17)]), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["amenagement"], "title", [], "any", false, false, false, 17), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t</a>
@@ -146,7 +148,7 @@ class __TwigTemplate_85071e7373b284c58636f068baf0afad823f69665c5f366f1051f5dbbe7
 
     public function getDebugInfo()
     {
-        return array (  124 => 25,  112 => 19,  107 => 17,  101 => 13,  97 => 12,  89 => 6,  79 => 5,  59 => 2,  36 => 1,);
+        return array (  126 => 25,  114 => 19,  107 => 17,  101 => 13,  97 => 12,  89 => 6,  79 => 5,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -167,7 +169,7 @@ class __TwigTemplate_85071e7373b284c58636f068baf0afad823f69665c5f366f1051f5dbbe7
 \t\t\t\t\t<div class=\"card\">
 \t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t<div class=\"card-title\">
-\t\t\t\t\t\t\t\t<a href=\"\">{{amenagement.title}}
+\t\t\t\t\t\t\t\t<a href=\"{{path('archi.show',{id :amenagement.id, slug: amenagement.slug})}}\">{{amenagement.title}}
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t<p class=\"card-text\">{{amenagement.description}}</p>
 \t\t\t\t\t\t\t</div>
