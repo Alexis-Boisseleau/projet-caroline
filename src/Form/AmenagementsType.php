@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class AmenagementsType extends AbstractType
 {
@@ -18,6 +19,9 @@ class AmenagementsType extends AbstractType
             ->add('title')
             ->add('description')
             ->add('content', CKEditorType::class)
+            ->add('imageFile', FileType::class, [
+                'required' => false
+            ])
             ->add('type', ChoiceType::class, [
                 'choices' => $this->getChoices()
             ]);

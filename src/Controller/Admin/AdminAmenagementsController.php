@@ -41,7 +41,6 @@ class AdminAmenagementsController extends AbstractController
     }
 
     /**
-     * 
      *
      * @Route("/admin/amenagements/create", name="admin.amenagements.new" )
      */
@@ -54,7 +53,7 @@ class AdminAmenagementsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->persist($amenagements);
             $this->em->flush();
-            $this->addFlash("success", 'Bien créé avec succes');
+            $this->addFlash("success", 'projet créé avec succes');
             return $this->redirectToRoute("admin.amenagements.index");
         }
 

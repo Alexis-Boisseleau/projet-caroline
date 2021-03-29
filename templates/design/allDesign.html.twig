@@ -11,15 +11,19 @@
 		<div class="row flex">
 			{%for amenagement in amenagements%}
 				<div class="col-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="card-title">
-								<a href="{{path('design.show',{id :amenagement.id, slug: amenagement.slug})}}">{{amenagement.title}}
-								</a>
-								<p class="card-text">{{amenagement.description}}</p>
-							</div>
-						</div>
+
+					{% if amenagement.filename %}
+						<div class="images">
+
+							<img src="{{ asset(vich_uploader_asset(amenagement, 'imageFile')| imagine_filter('thumb')) }} " class="images__img" alt="  ">
+							<div class="images__overlay">
+								<a href="{{path('design.show',{id :amenagement.id, slug: amenagement.slug})}}" class=" images__link">{{amenagement.title}}
+								</div>
+							</a>
+						{% endif %}
 					</div>
+
+
 				</div>
 			{% endfor %}
 		</div>

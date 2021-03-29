@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}{% endblock %}
+
+{% block body %}
+	<mjml>
+		<mj-body>
+			<mj-section>
+				<mj-column>
+
+					<div>{{contact.firsname}}</div>
+					<div>{{contact.lastname}}</div>
+					<div>{{contact.phone}}</div>
+					<div>{{contact.email}}</div>
+					<div>{{contact.message}}</div>
+
+				</mj-column>
+			</mj-section>
+		</mj-body>
+	</mjml>
+
+{% endblock %}

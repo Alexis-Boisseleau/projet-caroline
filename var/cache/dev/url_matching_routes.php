@@ -17,9 +17,12 @@ return [
         '/admin/amenagements/create' => [[['_route' => 'admin.amenagements.new', '_controller' => 'App\\Controller\\Admin\\AdminAmenagementsController::new'], null, null, null, false, false, null]],
         '/design' => [[['_route' => 'design-interieur', '_controller' => 'App\\Controller\\AmenagementInterieurController::index'], null, null, null, false, false, null]],
         '/architecture' => [[['_route' => 'architecture.index', '_controller' => 'App\\Controller\\ArchitectureController::index'], null, null, null, false, false, null]],
+        '/Contact' => [[['_route' => 'Contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/prestation' => [[['_route' => 'prestations', '_controller' => 'App\\Controller\\PrestationsController::index'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/elfinder.main.js' => [[['_route' => 'ef_main_js', '_controller' => 'FM\\ElfinderBundle\\Controller\\ElFinderController::mainJS'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -50,6 +53,10 @@ return [
                     .'|fconnect(?:/([^/]++)(?:/([^/]++))?)?(*:344)'
                     .'|lfinder(?:/([^/]++)(?:/([^/]++))?)?(*:387)'
                 .')'
+                .'|/media/cache/resolve/(?'
+                    .'|([A-z0-9_-]*)/rc/([^/]++)/(.+)(*:450)'
+                    .'|([A-z0-9_-]*)/(.+)(*:476)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -65,8 +72,10 @@ return [
         258 => [[['_route' => 'admin.delete', '_controller' => 'App\\Controller\\Admin\\AdminAmenagementsController::delete'], ['id'], null, null, false, true, null]],
         294 => [[['_route' => 'design.show', '_controller' => 'App\\Controller\\AmenagementInterieurController::show'], ['slug', 'id'], null, null, false, true, null]],
         344 => [[['_route' => 'ef_connect', '_controller' => 'FM\\ElfinderBundle\\Controller\\ElFinderController::load', 'instance' => 'default', 'homeFolder' => ''], ['instance', 'homeFolder'], null, null, false, true, null]],
-        387 => [
-            [['_route' => 'elfinder', '_controller' => 'FM\\ElfinderBundle\\Controller\\ElFinderController::show', 'instance' => 'default', 'homeFolder' => ''], ['instance', 'homeFolder'], null, null, false, true, null],
+        387 => [[['_route' => 'elfinder', '_controller' => 'FM\\ElfinderBundle\\Controller\\ElFinderController::show', 'instance' => 'default', 'homeFolder' => ''], ['instance', 'homeFolder'], null, null, false, true, null]],
+        450 => [[['_route' => 'liip_imagine_filter_runtime', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterRuntimeAction'], ['filter', 'hash', 'path'], ['GET' => 0], null, false, true, null]],
+        476 => [
+            [['_route' => 'liip_imagine_filter', '_controller' => 'Liip\\ImagineBundle\\Controller\\ImagineController::filterAction'], ['filter', 'path'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

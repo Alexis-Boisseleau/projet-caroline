@@ -1,0 +1,49 @@
+/* font*/
+
+@font-face {
+    font-family: 'quicksand';
+    src: url(fonts/Quicksand-Regular.otf);
+
+}
+
+.images {
+    width: auto;
+    position: relative;
+
+}
+
+.images__img {
+    display: block;
+    width: 100%;
+}
+
+.images__overlay {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.images__overlay:hover {
+    opacity: 1;
+}
+
+a {
+    color: white;
+}
+
+a:link,
+a:hover {
+    text-decoration: none;
+    color: white
+}
